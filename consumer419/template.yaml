@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  consumer419:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: consumer419/lambda_function.lambda_handler
+      Runtime: python3.6
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      Role: >-
+        arn:aws:iam::380587195682:role/cloud9-cloudlambdaweb-cloudlambdawebRole-M4ZST0K93QLY
+      CodeUri: .debug/
