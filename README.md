@@ -34,9 +34,9 @@ The primary steps in the lab were:
 ### Step 1: Create an AWS Cloud9 Environment
 * This allows you to create a space to work in that streamlines the integration process within AWS without having to deal with credential complications.
 
-### Step 2: Create a DynamoDB called "fang" that stores the names of example items "facebook", "amazon", "netflix", and "google".
+### Step 2: Create a DynamoDB called "fang" that stores the names of example items
 * This will be the table that the "producer" Lambda function pulls from, to look up snippets of text from Wikipedia using the wikipedia package.
-* This could really be a list of anything that you choose.
+* This could really be a list of anything that you choose, but a list of FANG companies is used for this example.
 
 ### Step 3: Create an S3 Bucket to store the outcomes
 * This is an S3 bucket to store the output tables that are created by the "consumer" Lambda function
