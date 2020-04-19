@@ -27,29 +27,29 @@ you will find the tutorial where from which I created this repo.
 
 In brief, the architecture flow for this porject is as follows:
 
-<img src="https://camo.githubusercontent.com/bb29cd924f9eb66730bbf7b0ed069a6ae03d2f1a/68747470733a2f2f757365722d696d616765732e67697468756275736572636f6e74656e742e636f6d2f35383739322f35353335343438332d62616537616638302d353437612d313165392d393930392d6135363231323531303635622e706e67"
+<img src="https://camo.githubusercontent.com/bb29cd924f9eb66730bbf7b0ed069a6ae03d2f1a/68747470733a2f2f757365722d696d616765732e67697468756275736572636f6e74656e742e636f6d2f35383739322f35353335343438332d62616537616638302d353437612d313165392d393930392d6135363231323531303635622e706e67">
 
 The primary steps in the lab were:
 
-Step 1: Create an AWS Cloud9 Environment
-*This allows you to create a space to work in that streamlines the integration process within AWS without having to deal with credential complications.
+### Step 1: Create an AWS Cloud9 Environment
+* This allows you to create a space to work in that streamlines the integration process within AWS without having to deal with credential complications.
 
-Step 2: Create a DynamoDB called "fang" that stores the names of example items "facebook", "amazon", "netflix", and "google".
-*This will be the table that the "producer" Lambda function pulls from, to look up snippets of text from Wikipedia using the wikipedia package.
-*This could really be a list of anything that you choose.
+### Step 2: Create a DynamoDB called "fang" that stores the names of example items "facebook", "amazon", "netflix", and "google".
+* This will be the table that the "producer" Lambda function pulls from, to look up snippets of text from Wikipedia using the wikipedia package.
+* This could really be a list of anything that you choose.
 
-Step 3: Create an S3 Bucket to store the outcomes
-*This is an S3 bucket to store the output tables that are created by the "consumer" Lambda function
-*The output will be .csv tables with analyzed fields- "Sentiment" and "Entities" 
+### Step 3: Create an S3 Bucket to store the outcomes
+* This is an S3 bucket to store the output tables that are created by the "consumer" Lambda function
+* The output will be .csv tables with analyzed fields- "Sentiment" and "Entities" 
 
-Step 4: Create an SQS Queue
+### Step 4: Create an SQS Queue
 * This queue, called "producer", will collect the messages pulled and place them in the queue, where the "consumer" function 
 will find them, process them, and store them in the S3 bucket, before deleting them. 
 
 
-Step 5: Create the "producer" and "consumer" Lambda functions
-*These are available in this provided github code, simply deploy them from you Cloud9 environment
-*You can then create a trigger within the Lambda Function console, to create a CloudWatch event at 
+### Step 5: Create the "producer" and "consumer" Lambda functions
+* These are available in this provided github code, simply deploy them from you Cloud9 environment
+* You can then create a trigger within the Lambda Function console, to create a CloudWatch event at 
 whatever time interval you designate. 
 
-Happy Cloud Coding!
+##### Happy Cloud Coding!
